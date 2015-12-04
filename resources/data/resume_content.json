@@ -1,0 +1,225 @@
+{
+    "personal": {
+        "name": "Matthew L. Dodson",
+        "address": "1673 Columbia Road NW #411",
+        "city": "Washington",
+        "state": "DC",
+        "zip": 20009,
+        "phone": "(202) 617-0025",
+        "email": "matt@dodson.digital",
+        "github": "dodsonm"
+    },
+    "summaryQualifications": [
+        "A New Media specialist. 14 years of experience in the IT field, 4 out of the first 8 years in a management role, past 6 years in the Journalism/Media industry.",
+        "Extensive experience collaborating with Editorial, Marketing, Advertising, Design, and Technical teams to produce rich, interactive features for Slate Magazine and clients such as the Washington Redskins. ",
+        "Demonstrated understanding of Agile software development and management methodologies, certified ScrumMaster with Scrum Alliance, Inc.",
+        "Demonstrated understanding of the technical side of planning applications as technical lead on front-end focused projects such as Slate Magazine’s The Hive and MySlate applications and various clients for HZDG.",
+        "Highly creative, pixel perfectionist with a talent for design and strong enthusiasm for collaborating with different teams to create unique, yet enjoyable and intuitive user experiences. ",
+        "Possesses expertise in HTML/CSS/JavaScript development for high-traffic, enterprise level Web sites, demonstrated as the lead front-end Web developer for Slate Magazine.",
+        "Possesses expertise in Object Oriented JavaScript and ActionScript with strong knowledge of related programming design patterns as demonstrated in various media players and interactive features for Slate Magazine and other properties of The Slate Group.",
+        "Demonstrated knowledge of Python and the Django framework on Slate Magazine’s SlateV, The Hive, and MySlate productions various Redskins’ microsites such as WOW Redskins and Redskins Health & Wellness.",
+        "Demonstrated understanding of GIS technologies, QGIS and Tilemill, with Slate’s Map of the Week."
+    ],
+    "technical": [
+        {
+            "name": "JavaScript",
+            "type": "language",
+            "level": 5
+        },
+        {
+            "name": "HTML 5 & XHTML",
+            "type": "language",
+            "level": 5
+        },
+        {
+            "name": "CSS",
+            "type": "language",
+            "level": 5
+        },
+        {
+            "name": "Less",
+            "type": "language",
+            "level": 4
+        },
+        {
+            "name": "Sass",
+            "type": "language",
+            "level": 2
+        },
+        {
+            "name": "XSLT",
+            "type": "language",
+            "level": 4
+        },
+        {
+            "name": "Django",
+            "type": "framework",
+            "level": 3
+        },
+        {
+            "name": "Python",
+            "type": "language",
+            "level": 2
+        },
+        {
+            "name": "jQuery",
+            "type": "library",
+            "level": 0
+        },
+        {
+            "name": "Ext JS",
+            "type": "framework",
+            "level": 0
+        },
+        {
+            "name": "Backbone",
+            "type": "framework",
+            "level": 0
+        },
+        {
+            "name": "AMD (Require & Common)",
+            "type": "library",
+            "level": 0
+        },
+        {
+            "name": "Modernizr",
+            "type": "library",
+            "level": 0
+        },
+        {
+            "name": "jQuery-UI",
+            "type": "library",
+            "level": 0
+        },
+        {
+            "name": "Bootstrap",
+            "type": "framework",
+            "level": 0
+        },
+        {
+            "name": "Foundation",
+            "type": "framework",
+            "level": 0
+        },
+        {
+            "name": "Linux (Ubuntu)",
+            "type": "platform",
+            "level": 0
+        },
+        {
+            "name": "Mac OS X",
+            "type": "",
+            "level": 0
+        },
+        {
+            "name": "Git",
+            "type": "platform",
+            "level": 0
+        }
+    ],
+    "samples": [
+        {
+            "name": "Front End Stacked (Personal Hobby Site)",
+            "url": "http://www.frontendstacked.com/",
+            "summary": ""
+        },
+        {
+            "name": "PBS LearningMedia Redesign",
+            "url": "http://www.pbslearningmedia.org/",
+            "summary": "Before: http://archive.pbslearningmedia.org/"
+        },
+        {
+            "name": "PBS LearningMedia Student Site",
+            "url": "http://www.pbslearningmedia.org/student/",
+            "summary": ""
+        },
+        {
+            "name": "PBS LearningMedia Teacher Tools",
+            "url": "http://www.pbslearningmedia.org/tools/",
+            "summary": ""
+        },
+        {
+            "name": "Monroe Street Market",
+            "url": "http://www.monroestreetmarket.com/",
+            "summary": ""
+        },
+        {
+            "name": "Foreign Policy: Wide Angle iPhone App",
+            "url": "",
+            "summary": "Can be downloaded for free from the iTunes App Store."
+        },
+        {
+            "name": "Slate Magazine’s Mormon’s in America map",
+            "url": "http://www.slate.com/articles/life/map_of_the_week/2012/02/mormon_population_in_the_u_s_an_interactive_map.html",
+            "summary": ""
+        },
+    ],
+    "experience": [
+        {
+            "org": "Celerity IT, LLC",
+            "position": "Front End Development Consultant for PBS Digital",
+            "dateline": "March 2013-Present",
+            "description": [
+                "Primary liaison between PBS Interactive (PBSi) internal design team and outsourced development teams. Ensure that aesthetic and functional requirements are communicated effectively to outsourced teams in U.S.A. & Romania. Ensure delivered product meets aesthetic and functional requirements.",
+                "Meet code production commitments usually involving creating static builds from Photoshop PSDs and integrating them with Django templates, or by retrofitting design to existing HTML and JavaScript.",
+                "Assist site analytics team when needed. They use Google Analytics, but previous experience with Omniture SiteCatalyst proved useful in these cases. After implementing Google Tag Manager, the analytics team has had less need for developer consultations.",
+                "Play &#8220;senior&#8221; role in a small team responsible for recommending and implementing Front End best practices. This includes effective use of modern Front End technologies such as Less, Grunt, and Bower. Also involved in decision-focused meetings with PBSi technical stakeholders to evaluate software development practices, and Front End frameworks."
+            ]
+        },
+        {
+            "org": "Hirshorn-Zuckerman Design Group",
+            "position": "Senior Developer",
+            "dateline": "August 2012-March 2013",
+            "description": [
+                "Work with designers, project managers, and account executives on Web applications for clients to bring static designs to life as Django-backed websites. Manage the flow of Web site maintenance requests from clients to junior developers. Train junior developers as needed. Manage software development life cycle on assigned projects. Expected to be primary point of contact for project managers and account executives regarding project status. Participate in development by maintaining existing Flash, Django, and Wordpress projects. "
+             ]
+        },
+        {
+            "org": "The Washington Post Company",
+            "position": "Software Engineer for Slate Magazine",
+            "dateline": "August 2008-August 2012",
+            "description": [
+                "Front-end Web Developer with a focus on interactive media design and development. Expected to take technical lead on projects as assigned. These duties include using Agile methodologies and consulting with designers, editors, marketing, advertising, and other engineers to plan the technical side of projects. Responsible for keeping tasks up to date in the Jira tracking system. Responsible for taking static mockups and turning them into fully functional Web applications.",
+                "Web development responsibilities include devising and implementing standards and best practices for the HTML, CSS, & JavaScript of The Slate Group Web sites. Responsible for supporting the front end and JSP layer of our current content management system, CQ5. Share responsibility with team members for tagging and deploying code from our Git repositories to production servers in Amazon’s cloud (AWS). Maintain custom GUI’s in CQ5 based in Ext JS."
+            ]
+        },
+        {
+            "org": "Aquent, LLC",
+            "position": "Contractor for Washington Post.Newsweek Interactive",
+            "dateline": "January 2007-August 2008",
+            "description": [
+                "This is the same position listed above, but as a contractor."
+            ]
+        },
+        {
+            "org": "Saw Enterprises International, Inc.",
+            "position": "Operations Manager",
+            "dateline": "February 2001-October 2005 & March 2006-January 2007",
+            "description": [
+                "Oversee day-to-day general and administrative functions of the company. Sales duties include identifying/qualifying leads, meeting with prospective customers, drafting proposals, and negotiating contracts.  Project Management duties include managing a team of developers for smaller, quick turn-around projects. Web design and development duties include art director for all SEI-developed Web sites, creating graphics, developing Web pages, creating Web applications with FileMaker and XSLT."
+            ]
+        },
+        {
+            "org": "Chronicle of Higher Education",
+            "position": "Database Developer",
+            "dateline": "October 2005-March 2006",
+            "description": [
+                "Develop and maintain a FileMaker Pro database system including migrating existing database applications from FileMaker version 6 to FileMaker version 8.  Gather requirements from reporters and editors to incorporate into new applications and upgrades of current applications.  Provide help desk support for database-related support requests.  Work with Web programmers to publish data to the company Web sites and print publications, The Chronicle of Higher Education and the Chronicle of Philanthropy. Design and implement Web interfaces to databases using XSLT."
+            ]
+        },
+        {
+            "org": "IIT Research Institute",
+            "position": "Data Management Specialist, Procurement",
+            "dateline": "June 1998-February 2001",
+            "description": [
+                "Apply knowledge of purchasing policies and procedures, legal aspects, markets, and vendors in procuring material requirements in a timely manner.  Review requisitions, analyze quotations, select or recommend vendors, initiate purchase orders. Perform cost-price analysis as needed. "
+            ]
+        },
+        {
+            "org": "",
+            "position": "",
+            "dateline": "",
+            "description": ""
+        },
+    ]
+},

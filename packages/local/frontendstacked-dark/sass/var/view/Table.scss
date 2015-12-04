@@ -1,0 +1,5 @@
+$grid-row-cell-border-color: lighten($base-color, 30%);
+$grid-row-cell-background-color: rgba(lighten($base-color, 15%), 0.8);
+$grid-row-cell-alt-background-color: rgba(lighten($base-color, 20%), 0.8);
+$grid-row-cell-selected-border-color: lighten($base-color, 50%);
+//$grid-row-cell-selected-border-style: dotted;

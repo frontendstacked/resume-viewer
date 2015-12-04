@@ -1,0 +1,12 @@
+$tab-background-opacity-over: 1;
+$tab-base-color: lighten($base-color, 15%);
+$tab-base-color-active: lighten($base-color, 25%);
+$tab-base-color-over: lighten($base-color, 20%);
+$tab-border-radius: 2px 2px 0 0;
+$tab-closable-icon-glyph-color: $fes-base-icon-color;
+$tab-closable-icon-glyph-color-active: $tab-closable-icon-glyph-color;
+$tab-closable-icon-glyph-color-active-focus: $tab-closable-icon-glyph-color;
+$tab-color: lighten($base-color, 75%);
+$tab-color-active: lighten($base-color, 100%);
+$tab-outline-color-focus: transparent;
+$tab-outline-style-focus: dotted;

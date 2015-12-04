@@ -1,0 +1,55 @@
+@include google-webfont(
+    $font-name: $fes-font-primary
+);
+@include google-webfont(
+    $font-name: $fes-font-display
+);
+@include google-webfont(
+    $font-name: $fes-font-hand
+);
+
+$border-layout-ct-background-color: rgb(0,0,0);
+$base-color: $fes-base-color;
+// $base-color: dynamic ( #808080 );
+// $base-gradient: dynamic ( 'matte' );
+// $body-background-color: dynamic ( transparent );
+// $color: dynamic ( #000 );
+// $css-shadow-border-radius: dynamic ( 5px );
+// $enable-font-icons: dynamic ( false );
+// $enable-font-smoothing: dynamic ( true );
+$font-family: 'Droid Sans', helvetica , arial , verdana , sans-serif;
+// $font-size: dynamic ( 13px );
+// $font-weight: dynamic ( normal );
+// $font-weight-bold: dynamic ( bold );
+// $image-extension: dynamic ( 'png' );
+// $image-search-path: '.';
+// $include-chrome: dynamic ( $include-webkit );
+// $include-default-uis: dynamic ( true );
+// $include-ff:  dynamic ( true );
+// $include-ie: dynamic ( true );
+// $include-not-found-images: dynamic ( false );
+// $include-opera: dynamic ( true );
+// $include-safari: dynamic ( $include-webkit );
+// $include-slicer-border-radius: dynamic ( $include-ie );
+// $include-slicer-gradient: dynamic ( $include-ie );
+// $include-webkit: dynamic ( true );
+// $line-height: dynamic ( normal );
+// $neutral-color: dynamic ( #dcdcdc );
+// $prefix: dynamic ( 'x-' );
+// $relative-image-path-for-uis: false;
+// $slicer-image-extension: dynamic ( 'gif' );
+// $theme-resource-path: dynamic ( '' );
+// mixins...
+// 1.   background-gradient( $bg-color, [$type], [$direction] )
+//      Example usage: .foo { @include background-gradient(#808080, matte, left); }
+// 2.   google-webfont( $font-name, [$font-weights] )
+//      @include google-webfont(
+//          $font-name: Exo,
+//          $font-weights: 200 300 400
+//      );
+
+
+// $panel-body-background-color: $PANTONE129-2-7C;
+// $panel-body-color: #ececec;
+// $toolbar-background-color: $PANTONE157-1-5C;
+

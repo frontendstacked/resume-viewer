@@ -1,0 +1,23 @@
+// // @include google-webfont(
+// //     $font-name: 'Droid Sans'
+// // );
+
+// // $button-small-font-family: 'Droid Sans';
+// // $button-medium-font-family: 'Droid Sans';
+
+$button-toolbar-background-color: lighten($base-color, 20%);
+$button-toolbar-border-color: lighten($base-color, 25%);
+$button-toolbar-color: lighten($base-color, 85%);
+
+// $button-toolbar-background-color-disabled: rgb(50, 50, 50);
+// $button-toolbar-background-color-over: rgb(155, 155, 155);
+// $button-toolbar-background-color-pressed: rgb(125, 135, 125);
+
+// $button-toolbar-background-color-focus: rgb(165, 175, 165);
+// $button-toolbar-background-color-focus-over: rgb(175, 185, 175);
+// $button-toolbar-background-color-focus-pressed: rgb(170, 180, 170);
+
+// $button-toolbar-inner-border-color-focus: lighten($base-color + rgb(0, 10, 0), 50%);
+$button-default-arrow-glyph-color: $fes-base-icon-color;
+$button-toolbar-arrow-glyph-color: $button-default-arrow-glyph-color;
+$button-grid-cell-arrow-glyph-color: $button-default-arrow-glyph-color;

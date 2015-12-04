@@ -1,0 +1,73 @@
+.application-menu.x-toolbar-default {
+    background-image: url('images/textures/concrete_wall/concrete_wall.png');
+    padding: 0 8px;
+
+    .x-box-inner {
+        overflow: visible;
+    }
+
+    .x-btn {
+        background: none;
+        border: none;
+        outline: none;
+    }
+    .x-btn-menu-active {
+        background-color: fuchsia;
+    }
+    .x-btn-wrap-default-toolbar-small.x-btn-arrow-right:after {
+        display: none;
+    }
+    .x-btn-focus {
+        box-shadow: none;
+    }
+    .x-btn-inner-default-toolbar-small {
+        font-size: 14px;
+    }
+    .x-btn:first-child {
+        left: 7px!important;
+
+        .x-btn-icon-el-default-toolbar-small {
+            color: $fes-steelblue;
+        }
+    }
+    .fes-mattd {
+        padding-bottom: 0;
+        padding-right: 16px;
+        padding-top: 0;
+
+        .x-btn-inner-default-toolbar-small {
+            color: fuchsia;
+            display: block;
+            font-family: $fes-font-display;
+            font-size: 25px;
+//height: 35px;
+height: 25px;
+            line-height: 1;
+
+            .fes-sm, .fes-sm-2, .fes-auth {
+                color: $fes-steelblue;
+//display: block;
+display: none;
+                font-family: $fes-font-hand;
+                font-size: 12px;
+                position: absolute;
+            }
+            .fes-sm {
+                top: 4px;
+                left: -4px;
+                text-transform: uppercase;
+            }
+            .fes-sm-2 {
+                bottom: 0;
+                left: 5px;
+            }
+            .fes-auth {
+                bottom: 0;
+                right: 5px;
+            }
+        }
+        .x-btn-icon-el-default-toolbar-small {
+            color: $fes-steelblue;
+        }
+    }
+}

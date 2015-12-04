@@ -1,0 +1,15 @@
+$grid-cell-inner-padding: 10px 5px;
+$grid-row-cell-color: lighten($base-color, 75%);
+
+$grid-row-cell-over-color: lighten($base-color, 100%);
+$grid-row-cell-over-background-color: rgba(lighten($base-color, 35%), 0.8);
+
+$grid-row-cell-selected-color: $grid-row-cell-over-color;
+$grid-row-cell-selected-background-color: rgba(lighten($base-color, 30%), 0.8);
+
+$grid-row-cell-focus-background-color: rgba(lighten($base-color, 20%), 0.8);
+$grid-row-cell-focus-border-color: lighten($base-color, 17%);
+$grid-row-cell-focus-color: $grid-row-cell-selected-color;
+
+$tree-glyph-color: $fes-base-icon-color;
+$tree-arrow-glyph-color: $tree-glyph-color;

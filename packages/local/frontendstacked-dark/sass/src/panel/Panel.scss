@@ -1,0 +1,54 @@
+/*
+background-image: url('images/textures/dark_brick_wall/dark_brick_wall.png');
+*/
+
+.x-panel.fes-raised {
+    background-image: url('images/textures/black_paper/black_paper.png');
+    border: solid 1px rgba($fes-steelblue, 0.3);
+    box-shadow: 0 0 100px 0px rgba($fes-steelblue, 0.2);
+
+    .x-panel-header-default {
+        @include background-image(
+            linear-gradient(
+                rgba(100,100,100,0.5) -75%,
+                rgba($fes-purple, 0.5)
+            )
+        );
+    }
+    .x-panel-body {
+        @include background-image(
+            radial-gradient(
+                rgba(0,0,0,0.5) 100%,
+                rgba($fes-purple, 0.2)
+            )
+        );
+    }
+}
+.x-panel-header-default {
+        @include background-image(
+            linear-gradient(
+                rgba(0,0,0,0.5) -100%,
+                rgba($fes-purple, 0.5)
+            )
+        );
+
+    .x-tool-img {
+        background-color: transparent;
+        color: $fes-base-icon-color;
+    }
+}
+.x-title-icon {
+    color: $fes-steelblue;
+}
+.x-treelist-item-icon {
+    color: $fes-steelblue;
+}
+.x-panel-header-default-framed {
+    background-image: $fes-background-texture-panel-header;
+}
+.x-panel-body-default {
+    background-image: url('images/textures/dark_stripes/dark_stripes.png');
+}
+.x-panel-body-default-framed {
+    background-image: none;
+}

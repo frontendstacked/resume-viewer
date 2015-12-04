@@ -1,0 +1,7 @@
+$menu-background-color: rgba(lighten($base-color, 65%), 0.95);
+$menu-border-color: lighten($base-color, 50%);
+$menu-glyph-color: $fes-base-icon-color;
+$menu-item-arrow-glyph-color: $menu-glyph-color;
+$menu-item-checkbox-glyph-color: $menu-glyph-color;
+$menu-item-active-background-color: lighten($base-color, 85%);
+$menu-item-active-text-color: $menu-glyph-color;

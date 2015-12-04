@@ -1,0 +1,10 @@
+// @include google-webfont(
+//     $font-name: 'Open Sans'
+// );
+
+// $panel-header-font-family: dynamic('Open Sans');
+$panel-body-background-color: lighten($base-color, 8%);
+$panel-body-color: lighten($base-color, 80%);
+$panel-frame-background-color: $panel-body-background-color;
+
+$panel-header-glyph-color: $fes-base-icon-color;
