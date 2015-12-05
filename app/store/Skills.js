@@ -1,7 +1,16 @@
 Ext.define('ResumeViewer.store.Skills', {
     extend: 'Ext.data.Store',
-    requires: 'ResumeViewer.model.Skills',
-    model: 'ResumeViewer.model.Skills',
+    requires: 'ResumeViewer.model.Skill',
+    model: 'ResumeViewer.model.Skill',
     alias: 'store.skills',
-    autoLoad: true
+    storeId: 'skillsStore',
+    autoLoad: true,
+    proxy: {
+        type: 'ajax',
+        url: 'resources/data/skills.json',
+        reader: {
+            type: 'json',
+            rootProperty: 'skills'
+        }
+    }
 });

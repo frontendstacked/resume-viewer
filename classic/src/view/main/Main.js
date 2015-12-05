@@ -9,8 +9,7 @@ Ext.define('ResumeViewer.view.main.Main', {
     extend: 'Ext.panel.Panel',
     xtype: 'app-main',
     requires: [
-        'ResumeViewer.store.Personnel',
-        'ResumeViewer.view.skills.Skills'
+        'ResumeViewer.store.Personnel'
     ],
 //    title: 'Welcome to My Personal Site: Front End Stacked <small>(Don\'t snicker, it was a cheap domain)</small>',
     layout: 'border',
@@ -128,7 +127,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                 // bbar: [
                 //     { xtype: 'button', text: 'Button' }
                 // ]//,
-                activeTab: 'skillsTab',
+                activeTab: 'skillsGaugeTab',
                 items: [
                     {
                         xtype: 'mainlist',
@@ -144,10 +143,17 @@ Ext.define('ResumeViewer.view.main.Main', {
                         html: '<h3>This is a Panel</h3><p>Use this for styling this component</p>'
                     },
                     {
-                        xtype: 'skills',
+                        xtype: 'skills-tester',
                         id: 'skillsTab',
                         closable: true,
                         padding: 15
+                    },
+                    {
+                        xtype: 'skillssummary',
+                        id: 'skillsGaugeTab',
+                        closable: true,
+                        title: 'Skills Summary',
+                        background: 'transparent'
                     }
                 ]
             },
