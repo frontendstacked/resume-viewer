@@ -4,7 +4,7 @@ Ext.define('ResumeViewer.store.Skills', {
     model: 'ResumeViewer.model.Skill',
     alias: 'store.skills',
     storeId: 'skillsStore',
-    autoLoad: true,
+    //autoLoad: true,
     proxy: {
         type: 'ajax',
         url: 'resources/data/skills.json',

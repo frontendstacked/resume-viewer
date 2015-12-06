@@ -1,14 +1,14 @@
 
 Ext.define('ResumeViewer.view.skills.Skills',{
     extend: 'Ext.grid.Panel',
-    xtype: 'skills-tester',
+    xtype: 'skillsgrid',
     requires: [
         // 'ResumeViewer.view.skills.SkillsController',
         // 'ResumeViewer.view.skills.SkillsModel',
-        'ResumeViewer.store.Skills'
+        //'ResumeViewer.store.Skills'
     ],
 
-    model: 'skills',
+//    model: 'skills',
 
     // controller: 'skills-skills',
     // viewModel: {

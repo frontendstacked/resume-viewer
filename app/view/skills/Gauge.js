@@ -2,6 +2,14 @@
 Ext.define('ResumeViewer.view.skills.Gauge',{
     extend: 'Ext.chart.PolarChart',
     xtype: 'skillsgauge',
+    requires: [
+        'Ext.chart.series.*',
+        'ResumeViewer.store.Skills'
+    ],
+
+    store: {
+        type: 'skills'
+    },
 
     closable: true,
 
@@ -17,7 +25,7 @@ Ext.define('ResumeViewer.view.skills.Gauge',{
         minimum: 1,
         //,
         // needle: true,
-        needleLength: 95,
+        needleLength: 95
         // needleWidth: 4,
         // sectors: [1,2,3,4,5]
     }

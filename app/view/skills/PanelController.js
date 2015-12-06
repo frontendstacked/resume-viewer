@@ -3,11 +3,18 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
     alias: 'controller.skills-panel',
 
     init: function () {
-        var viewModel = this.getViewModel(); // triggers data load
+        Ext.data.StoreManager.lookup('skillsStore').load();
     },
-
     onSkillsLoad: function (store, records, successful, eOpts ) {
+        this.refresh();
+    },
+    refresh: function () {
+        this.getView().removeAll();
+        this.addPanels();
+    },
+    addPanels: function () {
         var view = this.getView(),
+            store = this.getStore('skills'),
             storeRecords = store.getData(),
             typeColors = [
                 'black',
@@ -16,25 +23,21 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
                 'rgba(100,200,250, 0.9)'
             ],
             calcedColumnWidth = 1 / 2,
-            screenWidth;
+            panelWidth = this.getView().body.getWidth();
 
-        // NOTE: These are ROUGHED IN breakpoints
+        // NOTE: These are ROUGHED IN breakpoints (win.innerHeight - 320)
         // TODO: figure out Ext JS way of handling this
-        if (window.innerWidth > 768 && window.innerWidth < 999) {
+        if (panelWidth > 580 && panelWidth < 779) {
             calcedColumnWidth = 1 / 3;
-        } else if (window.innerWidth > 1000 && window.innerWidth < 1199) {
+        } else if (panelWidth > 780 && panelWidth < 979) {
             calcedColumnWidth = 1 / 4;
-        } else if (window.innerWidth > 1200 && window.innerWidth < 1399) {
+        } else if (panelWidth > 980 && panelWidth < 1179) {
             calcedColumnWidth = 1 / 5;
-        } else if (window.innerWidth > 1400 && window.innerWidth < 1599) {
+        } else if (panelWidth > 1180 && panelWidth < 1379) {
             calcedColumnWidth = 1 / 6;
-        } else if (window.innerWidth > 1600 && window.innerWidth < 1899) {
+        } else if (panelWidth > 1380) {
             calcedColumnWidth = 1 / 7;
-        } else if (window.innerWidth > 1900) {
-            calcedColumnWidth = 1 / 8;
         }
-
-        view.removeAll();
 
         for (var i = 0; i < store.getCount(); i += 1) {
 
@@ -48,7 +51,7 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
                 title: store.getAt(i).get('name'),
                 background: 'rgba(0,0,0,0)',
                 cls: 'fes-raised fes-gauge',
-                margin: '2%',
+                margin: '5%',
                 // padding: '0 15',
                 width: 190,
                 columnWidth: calcedColumnWidth,
@@ -59,9 +62,8 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
                             level: store.getAt(i).get('level')
                         }
                     ]
-                }
+                },
             }));
         }
     }
-
 });

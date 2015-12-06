@@ -9,12 +9,21 @@ Ext.define('ResumeViewer.view.main.Main', {
     extend: 'Ext.panel.Panel',
     xtype: 'app-main',
     requires: [
-        'ResumeViewer.store.Personnel'
+        'ResumeViewer.store.Personnel',
+        'ResumeViewer.store.Skills'
     ],
 //    title: 'Welcome to My Personal Site: Front End Stacked <small>(Don\'t snicker, it was a cheap domain)</small>',
     layout: 'border',
     controller: 'main',
     viewModel: 'main',
+    listeners: {
+        afterlayout: {
+            fn: function () {
+                Ext.getCmp('centerPanel').add({
+                });
+            }
+        }
+    },
     items: [
         {
             title: 'My Resume',
@@ -106,56 +115,22 @@ Ext.define('ResumeViewer.view.main.Main', {
         {
             region: 'center',
             xtype: 'panel',
+            id: 'centerPanel',
             frame: false,
             layout: 'fit',
             border: false,
             title: 'Use Navigation at Left',
-            items: {
-                xtype: 'tabpanel',
-                border: false,
-                title: 'Generic Panel',
-                cls: 'fes-raised',
-                margin: '25',
-                // html: '<h3>This is a Panel</h3><p>Use this for styling this component</p>'//,
-                // tbar: [
-                //     { xtype: 'button', text: 'Button' }
-                // ],
-                // bbar: [
-                //     { xtype: 'button', text: 'Button' }
-                // ]//,
-                activeTab: 'skillsGaugeTab',
-                items: [
-                    {
-                        xtype: 'mainlist',
-                        closable: true,
-                        title: 'People'
-
-                    },
-                    {
-                        xtype: 'panel',
-                        title: 'Plain Panel',
-                        closable: true,
-                        frame: true,
-                        html: '<h3>This is a Panel</h3><p>Use this for styling this component</p>'
-                    },
-                    {
-                        xtype: 'skills-tester',
-                        id: 'skillsTab',
-                        closable: true,
-                        padding: 15
-                    },
-                    {
-                        xtype: 'skillssummary',
-                        id: 'skillsGaugeTab',
-                        closable: true,
-                        title: 'Skills Summary',
-                        background: 'transparent'
-                    }
-                ]
-            },
             bind: {
                 title: '{selectedNodePath}',
                 html: '<iframe src="{selectedNodeUrl}" frameborder="0" width="100%" height="100%"></iframe>'
+            },
+            items: {
+                xtype: 'skillssummary',
+                closable: true,
+                background: 'rgba(0,0,0,0)',
+                title: 'Skills Charts',
+                margin: 25,
+                cls: 'fes-raised'
             }
         },
         {
@@ -172,98 +147,4 @@ Ext.define('ResumeViewer.view.main.Main', {
             }
         }
     ]
-
-    // requires: [
-    //     'Ext.plugin.Viewport'
-    //     //,
-    //     // 'Ext.window.MessageBox',
-
-    //     // 'ResumeViewer.view.main.MainController',
-    //     // 'ResumeViewer.view.main.MainModel',
-    //     // 'ResumeViewer.view.main.List'
-    // ],
-
-    // controller: 'main',
-    // viewModel: 'main',
-
-    // ui: 'navigation',
-
-    // tabBarHeaderPosition: 1,
-    // titleRotation: 0,
-    // tabRotation: 0,
-
-    // header: {
-    //     layout: {
-    //         align: 'stretchmax'
-    //     },
-    //     title: {
-    //         bind: {
-    //             text: '{name}'
-    //         },
-    //         flex: 0
-    //     },
-    //     iconCls: 'fa-th-list'
-    // },
-
-    // tabBar: {
-    //     flex: 1,
-    //     layout: {
-    //         align: 'stretch',
-    //         overflowHandler: 'none'
-    //     }
-    // },
-
-    // responsiveConfig: {
-    //     tall: {
-    //         headerPosition: 'top'
-    //     },
-    //     wide: {
-    //         headerPosition: 'left'
-    //     }
-    // },
-
-    // defaults: {
-    //     bodyPadding: 20,
-    //     tabConfig: {
-    //         plugins: 'responsive',
-    //         responsiveConfig: {
-    //             wide: {
-    //                 iconAlign: 'left',
-    //                 textAlign: 'left'
-    //             },
-    //             tall: {
-    //                 iconAlign: 'top',
-    //                 textAlign: 'center',
-    //                 width: 120
-    //             }
-    //         }
-    //     }
-    // },
-
-    // items: [{
-    //     title: 'Home',
-    //     iconCls: 'fa-home',
-    //     // The following grid shares a store with the classic version's grid as well!
-    //     items: [{
-    //         xtype: 'mainlist'
-    //     }]
-    // }, {
-    //     title: 'Users',
-    //     iconCls: 'fa-user',
-    //     bind: {
-    //         html: '{loremIpsum}'
-    //     }
-    // }, {
-    //     title: 'Groups',
-    //     iconCls: 'fa-users',
-    //     bind: {
-    //         html: '{loremIpsum}'
-    //     }
-    // }, {
-    //     title: 'Settings',
-    //     iconCls: 'fa-cog',
-    //     bind: {
-    //         html: '{loremIpsum}'
-    //     }
-    // }]
 });

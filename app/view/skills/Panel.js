@@ -1,7 +1,8 @@
 
-Ext.define('ResumeViewer.view.skills.Panel',{
+Ext.define('ResumeViewer.view.skills.Panel', {
     extend: 'Ext.panel.Panel',
     xtype: 'skillssummary',
+    title: 'Skills Charts',
 
     controller: 'skills-panel',
     viewModel: {
@@ -14,7 +15,14 @@ Ext.define('ResumeViewer.view.skills.Panel',{
 
     scrollable: true,
     listeners: [
-        { resize: 'onSkillsPanelResize' }
+        {
+            resize: {
+                fn: function () {
+                    Ext.Function.defer(this.controller.refresh, 100, this.controller);
+                }
+            }
+        },
+
     ]
 
 });

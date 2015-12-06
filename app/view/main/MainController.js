@@ -13,6 +13,9 @@ Ext.define('ResumeViewer.view.main.MainController', {
         // TODO - welcome message goes here
     },
 
+    init: function () {
+    },
+
     onItemClick: function (record, item, index, e) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
@@ -37,17 +40,12 @@ Ext.define('ResumeViewer.view.main.MainController', {
             menuItem.setText("Exit Fullscreen");
         }
     },
-    onSkillsPanelResize: function ( thisPanel, width, height, oldWidth, oldHeight, eOpts ) {
-        var skillsStore = Ext.data.StoreManager.lookup('skillsStore');
-        skillsStore.reload();
-    },
     // TODO: Conver Fullscreen Utils into Module ...............................
     /**
      * @param {HTMLElement} element Either the document object or a specific
      * element. (Chrome seems to need document.body)
      */
     enterFullscreen: function (el) {
-        console.log(el);
         if (el.requestFullscreen) {
             el.requestFullscreen();
         } else if(el.mozRequestFullScreen) {

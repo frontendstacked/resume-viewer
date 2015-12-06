@@ -10,6 +10,7 @@ Ext.define('ResumeViewer.Application', {
 
     stores: [
         // TODO: add global / shared stores here
+        'ResumeViewer.store.Skills'
     ],
 
     launch: function () {
