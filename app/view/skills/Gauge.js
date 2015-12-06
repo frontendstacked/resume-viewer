@@ -3,13 +3,15 @@ Ext.define('ResumeViewer.view.skills.Gauge',{
     extend: 'Ext.chart.PolarChart',
     xtype: 'skillsgauge',
 
+    closable: true,
+
     series: {
         type: 'gauge',
         angleField: 'level',
-        colors: [
-            'fuchsia',
-            'rgba(175,198,255, 0.2)'
-        ],
+        // colors: [
+        //     'rgba(255,0,255, 0.8)',
+        //     'rgba(175,198,255, 0.2)'
+        // ],
         donut: 30,
         maximum: 5,
         minimum: 1,

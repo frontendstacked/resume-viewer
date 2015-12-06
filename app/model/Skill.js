@@ -5,6 +5,7 @@ Ext.define('ResumeViewer.model.Skill', {
     fields: [
         { name: 'name', type: 'string' },
         { name: 'type', type: 'string' },
+        { name: 'type_id', type: 'int' },
         { name: 'level', type: 'int' }
     ]
 });

@@ -8,6 +8,9 @@ background-image: url('images/textures/dark_brick_wall/dark_brick_wall.png');
     box-shadow: 0 0 100px 0px rgba($fes-steelblue, 0.2);
 
     .x-panel-header-default {
+        .x-tool-close {
+            font-size: 13px;
+        }
         @include background-image(
             linear-gradient(
                 rgba(100,100,100,0.5) -75%,
@@ -22,6 +25,18 @@ background-image: url('images/textures/dark_brick_wall/dark_brick_wall.png');
                 rgba($fes-purple, 0.2)
             )
         );
+    }
+
+    &.fes-gauge {
+        box-shadow: none;
+
+        .x-panel-header-default {
+            padding: 8px 10px;
+
+           .x-title {
+            font-size: 13px;
+           }
+        }
     }
 }
 .x-panel-header-default {

@@ -4,97 +4,116 @@
         {
             "name": "JavaScript",
             "type": "language",
+            "type_id": 1,
             "level": 5
         },
         {
             "name": "HTML 5 & XHTML",
             "type": "language",
+            "type_id": 1,
             "level": 5
         },
         {
             "name": "CSS",
             "type": "language",
+            "type_id": 1,
             "level": 5
         },
         {
             "name": "Less",
             "type": "language",
+            "type_id": 1,
             "level": 4
         },
         {
             "name": "Sass",
             "type": "language",
+            "type_id": 1,
             "level": 2
         },
         {
             "name": "XSLT",
             "type": "language",
+            "type_id": 1,
             "level": 4
         },
         {
             "name": "Django",
             "type": "framework",
+            "type_id": 2,
             "level": 3
         },
         {
             "name": "Python",
             "type": "language",
+            "type_id": 1,
             "level": 2
         },
         {
             "name": "jQuery",
             "type": "library",
-            "level": 0
+            "type_id": 2,
+            "level": 5
         },
         {
             "name": "Ext JS",
             "type": "framework",
-            "level": 0
+            "type_id": 2,
+            "level": 4
         },
         {
             "name": "Backbone",
             "type": "framework",
-            "level": 0
+            "type_id": 2,
+            "level": 3
         },
         {
             "name": "AMD (Require & Common)",
             "type": "library",
-            "level": 0
+            "type_id": 2,
+            "level": 3
         },
         {
             "name": "Modernizr",
             "type": "library",
-            "level": 0
+            "type_id": 2,
+            "level": 4
         },
         {
             "name": "jQuery-UI",
             "type": "library",
-            "level": 0
+            "type_id": 2,
+            "level": 5
         },
         {
             "name": "Bootstrap",
             "type": "framework",
-            "level": 0
+            "type_id": 2,
+            "level": 5
         },
         {
             "name": "Foundation",
             "type": "framework",
-            "level": 0
+            "type_id": 2,
+            "level": 2
         },
         {
             "name": "Linux (Ubuntu)",
             "type": "platform",
-            "level": 0
+            "type_id": 3,
+            "level": 2
         },
         {
             "name": "Mac OS X",
-            "type": "",
-            "level": 0
+            "type": "platform",
+            "type_id": 3,
+            "level": 4
         },
         {
             "name": "Git",
             "type": "platform",
-            "level": 0
+            "type_id": 3,
+            "level": 3
         }
     ]
 }
