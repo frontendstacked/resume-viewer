@@ -37,6 +37,10 @@ Ext.define('ResumeViewer.view.main.MainController', {
             menuItem.setText("Exit Fullscreen");
         }
     },
+    onSkillsPanelResize: function ( thisPanel, width, height, oldWidth, oldHeight, eOpts ) {
+        var skillsStore = Ext.data.StoreManager.lookup('skillsStore');
+        skillsStore.reload();
+    },
     // TODO: Conver Fullscreen Utils into Module ...............................
     /**
      * @param {HTMLElement} element Either the document object or a specific

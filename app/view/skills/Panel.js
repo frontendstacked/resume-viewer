@@ -9,10 +9,12 @@ Ext.define('ResumeViewer.view.skills.Panel',{
     },
 
     layout: {
-        type: 'table',
-        columns: 4
+        type: 'column'
     },
 
-    scrollable: true
+    scrollable: true,
+    listeners: [
+        { resize: 'onSkillsPanelResize' }
+    ]
 
 });

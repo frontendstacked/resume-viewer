@@ -28,31 +28,27 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'Quit' }
+                            { text: 'Matt\'s Site (TK)' }
                         ]
                     }
                 },
                 {
-                    text: '<strong>Resume Viewer</strong>',
+                    text: '<strong>Matt Dodson\'s Resume</strong>',
                     menu: {
                         shadow: false,
                         items: [
                             { text: 'About this Resume Viewer App ... &#160;&#160;&#160;&#160;' },
-                            { text: 'Open' },
-                            { text: 'Save' },
-                            { text: 'Save As...' }
+                            { text: 'Github Project' }
                         ]
                     }
                 },
                 {
-                    text: 'File',
+                    text: 'Word File',
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'New' },
-                            { text: 'Open' },
                             { text: 'Save' },
-                            { text: 'Save As...' }
+                            { text: 'Print' }
                         ]
                     }
                 },
@@ -91,7 +87,7 @@ Ext.define('ResumeViewer.view.main.Main', {
             xtype: 'panel',
             title: 'Navigation',
             collapsible: true,
-            width: 250,
+            width: 258,
             split: true,
             reference: 'treelistContainerWestNav',
             layout: {
