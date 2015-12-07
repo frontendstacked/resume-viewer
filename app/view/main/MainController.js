@@ -38,6 +38,7 @@ Ext.define('ResumeViewer.view.main.MainController', {
             id = [target.id, view].join('-'),
             title = record.get('text'),
             src = record.get('data').url || null,
+            html = record.get('data').html || null,
             requestedItem = target.queryById(id),
             visibleItems = target.query('> panel[hidden=false]');
 
@@ -46,24 +47,13 @@ Ext.define('ResumeViewer.view.main.MainController', {
             visibleItems[i].hide();
         }
         if (!requestedItem) {
-            requestedItem = target.add({
-                xtype: type,
+            requestedItem = target.add(this.createConfig({
+                type: type,
                 id: id,
-                cls: 'fes-raised fes-center-firstchild',
                 title: title,
                 src: src,
-                margin: 25,
-                background: 'rgba(0,0,0,0)',
-                closable: true,
-                listeners: {
-                    close: {
-                        fn: function () {
-                            Ext.getCmp('nav-treepanel').setSelection(null);
-                            Ext.getCmp('nav-treepanel').blur();
-                        }
-                    }
-                }
-            });
+                html: html
+            }));
         }
         requestedItem.show();
     },
@@ -87,6 +77,45 @@ Ext.define('ResumeViewer.view.main.MainController', {
             menuItem.setIconCls("fa fa-close");
             menuItem.setText("Exit Fullscreen");
         }
+    },
+    //  Non-handlers
+    createConfig: function (cfg) {
+        baseConfig = {
+            xtype: cfg.type,
+            id: cfg.id,
+            cls: 'fes-raised fes-center-firstchild',
+            title: cfg.title,
+            margin: 25,
+            bodyPadding: 30,
+            background: 'rgba(0,0,0,0)',
+            closable: true,
+            listeners: {
+                close: {
+                    fn: function () {
+                        Ext.getCmp('nav-treepanel').setSelection(null);
+                        Ext.getCmp('nav-treepanel').blur();
+                    }
+                }
+            }
+        };
+        console.log(cfg);
+        if (cfg.html) {
+            baseConfig.html = cfg.html;
+        }
+
+        // view/xtype-specific modifications to base panel common configs
+        switch (cfg.type) {
+            case 'uxiframe':
+                baseConfig.xtype = 'panel';
+                baseConfig.layout = 'fit';
+                baseConfig.items = {
+                    xtype: 'uxiframe',
+                    src: cfg.src
+                };
+                break;
+        }
+        console.log(baseConfig);
+        return baseConfig;
     },
     // TODO: Conver Fullscreen Utils into Module ...............................
     /**

@@ -47,12 +47,14 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                 expanded: true,
                 children: [
                     {
-                        text: 'Bio',
+                        text: 'Intro / Bio',
                         leaf: true,
                         data: {
-                            url: '/resources/bio.html',
-                            view: 'biopanel',
-                            type: 'panel'
+                            view: 'intropanel',
+                            type: 'panel',
+                            html:
+                                '<h1>Welcome to My Resume Viewer App!</h1>' +
+                                '<h2>Greetings and Saluations</h2>'
                         }
                     },
                     {
