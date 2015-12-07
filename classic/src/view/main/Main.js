@@ -55,7 +55,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                     }
                 },
                 {
-                    text: '<strong>Matt Dodson\'s Resume</strong>',
+                    text: '<strong>Matt Dodson\'s Resume</strong>&#160;<small style="color:rgb(100,200,250)">Beta</small>',
                     menu: {
                         shadow: false,
                         items: [
