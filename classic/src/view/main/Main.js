@@ -126,7 +126,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                 useArrows: true,
                 cls: 'fes-navtree',
                 listeners: {
-                    select: 'onNavItemClick'
+                    select: 'onNavItemSelect'
                 },
                 bind: '{navItems}'
             }]
@@ -134,7 +134,7 @@ Ext.define('ResumeViewer.view.main.Main', {
         {
             region: 'center',
             xtype: 'panel',
-            id: 'centerPanel',
+            id: 'centerRegion',
             frame: false,
             layout: 'fit',
             border: false,

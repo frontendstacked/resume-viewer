@@ -37,19 +37,10 @@ Ext.define('ResumeViewer.view.main.MainModel', {
             } else {
                 return 'Sorry, no description available.';
             }
-        },
-        selectedNodePanel: function (get) {
-            var selection = get('treelist.selection');
-            console.log(selection);
-            // return {
-            //     title: 'ATDHVSGHLVDJ0',
-            //     xtype: 'skillssummary',
-            //     cls: 'fes-raised',
-            //     html: 'HTML'
-            // };
         }
     },
     stores: {
+        // TODO: Store this data externally where it will be easier to edit
         navItems: {
             type: 'tree',
             root: {
@@ -57,47 +48,84 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                 children: [
                     {
                         text: 'Bio',
-                        url: '/resources/bio.html',
-                        leaf: true
+                        leaf: true,
+                        data: {
+                            url: '/resources/bio.html',
+                            view: 'biopanel',
+                            type: 'panel'
+                        }
                     },
                     {
                         text: 'Qualifications',
-                        expanded: false,
-                        leaf: true
+                        leaf: true,
+                        data: {
+                            view: 'qualificationspanel',
+                            type: 'panel'
+                        }
                     },
                     {
                         text: 'Skills',
-                        leaf: true
+                        leaf: true,
+                        data: {
+                            view: 'skillssummary',
+                            type: 'skillssummary'
+                        }
                     },
                     {
                         text: 'Samples',
                         children: [
                             {
                                 text: 'PBS LearningMedia',
-                                url: 'http://www.pbslearningmedia.org',
                                 children: [
                                     {
                                         text: 'Teacher Tools',
-                                        url: 'http://www.pbslearningmedia.org/tools/',
-                                        leaf: true
+                                        leaf: true,
+                                        data: {
+                                            url: 'http://www.pbslearningmedia.org/tools/',
+                                            view: 'teachertoolspanel',
+                                            type: 'panel'
+                                        }
                                     },
                                     {
                                         text: 'Student Homepage',
-                                        url: 'http://www.pbslearningmedia.org/student/',
                                         leaf: true,
-                                        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                        data: {
+                                            url: 'http://www.pbslearningmedia.org/student/',
+                                            view: 'studenthomepagepanel',
+                                            type: 'panel'
+                                        }
                                     }
-                                ]
+                                ],
+                                data: {
+                                    url: 'http://www.pbslearningmedia.org',
+                                    view: 'pbslmpanel',
+                                    type: 'panel'
+                                }
                             }
-                        ]
+                        ],
+                        data: {
+                            url: '',
+                            view: 'samplespanel',
+                            type: 'panel'
+                        }
                     },
                     {
                         text: 'Work Experience',
-                        leaf: true
+                        leaf: true,
+                        data: {
+                            url: '',
+                            view: 'workexperiencepanel',
+                            type: 'panel'
+                        }
                     },
                     {
                         text: 'Education',
-                        leaf: true
+                        leaf: true,
+                        data: {
+                            url: '',
+                            view: 'educationpanel',
+                            type: 'panel'
+                        }
                     }
                 ]
             }

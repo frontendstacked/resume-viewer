@@ -7,6 +7,12 @@
 Ext.define('ResumeViewer.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
+    requires: [
+        'ResumeViewer.view.skills.Panel',
+        'ResumeViewer.view.skills.PanelController',
+        'ResumeViewer.view.skills.PanelModel',
+    ],
+
     alias: 'controller.main',
 
     beforeRender: function (main) {
@@ -25,9 +31,31 @@ Ext.define('ResumeViewer.view.main.MainController', {
     onItemClick: function (record, item, index, e) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
+    onNavItemSelect: function (treemodel, record, index) {
+        var target = Ext.getCmp('centerRegion'),
+            type = record.get('data').type,
+            view = record.get('data').view,
+            id = [target.id, view].join('-'),
+            title = record.get('text'),
+            requestedItem = target.queryById(id),
+            visibleItems = target.query('> panel[hidden=false]');
 
-    onNavItemClick: function () {
-        console.log('What the FUCK is this shit???');
+        // TODO: Find out if a card layout manager could handle this better
+        for (var i = 0; i < visibleItems.length; i += 1) {
+            visibleItems[i].hide();
+        }
+        if (!requestedItem) {
+            requestedItem = target.add({
+                xtype: type,
+                id: id,
+                cls: 'fes-raised fes-center-firstchild',
+                title: title,
+                margin: 25,
+                background: 'rgba(0,0,0,0)',
+                closable: true
+            });
+        }
+        requestedItem.show();
     },
 
     // onItemSelected: function (sender, record) {
