@@ -11,12 +11,12 @@ Ext.define('ResumeViewer.view.main.MainController', {
 
     beforeRender: function (main) {
         // TODO - welcome message goes here
-        Ext.Msg.show({
-            title: 'Welcome!',
-            message: 'Greetings and salutations.',
-            buttons: Ext.Msg.OK,
-            shadow: false
-        });
+        // Ext.Msg.show({
+        //     title: 'Welcome!',
+        //     message: 'Greetings and salutations.',
+        //     buttons: Ext.Msg.OK,
+        //     shadow: false
+        // });
     },
 
     init: function () {
@@ -24,6 +24,10 @@ Ext.define('ResumeViewer.view.main.MainController', {
 
     onItemClick: function (record, item, index, e) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    },
+
+    onNavItemClick: function () {
+        console.log('What the FUCK is this shit???');
     },
 
     // onItemSelected: function (sender, record) {

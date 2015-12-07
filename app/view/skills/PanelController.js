@@ -8,6 +8,7 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
     onSkillsLoad: function (store, records, successful, eOpts ) {
         this.refresh();
     },
+    // TODO: can updateLayout do this better?
     refresh: function () {
         this.getView().removeAll();
         this.addPanels();

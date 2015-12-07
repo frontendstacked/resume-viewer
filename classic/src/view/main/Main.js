@@ -30,6 +30,17 @@ Ext.define('ResumeViewer.view.main.Main', {
                         shadow: false,
                         items: [
                             {
+                                text: 'Other Experimental Apps (TK)',
+                                handler: function () {
+                                    Ext.Msg.show({
+                                        title: 'Check back later',
+                                        message: 'Sorry, Matt\'s site site is still under construction.',
+                                        buttons: Ext.Msg.OK,
+                                        shadow: false
+                                    });
+                                }
+                            },
+                            {
                                 text: 'Matt\'s Site (TK)',
                                 handler: function () {
                                     Ext.Msg.show({
@@ -109,9 +120,14 @@ Ext.define('ResumeViewer.view.main.Main', {
             border: false,
             scrollable: 'y',
             items: [{
-                xtype: 'treelist',
-                reference: 'treelist',
+                xtype: 'treepanel',
                 controller: 'main',
+                rootVisible: false,
+                useArrows: true,
+                cls: 'fes-navtree',
+                listeners: {
+                    select: 'onNavItemClick'
+                },
                 bind: '{navItems}'
             }]
         },
@@ -122,19 +138,21 @@ Ext.define('ResumeViewer.view.main.Main', {
             frame: false,
             layout: 'fit',
             border: false,
-            title: 'Use Navigation at Left',
-            bind: {
-                title: '{selectedNodePath}',
-                html: '<iframe src="{selectedNodeUrl}" frameborder="0" width="100%" height="100%"></iframe>'
-            },
-            items: {
-                xtype: 'skillssummary',
-                closable: true,
-                background: 'rgba(0,0,0,0)',
-                title: 'Skills Charts',
-                margin: 25,
-                cls: 'fes-raised'
-            }
+            title: 'Use Navigation at Left'
+            // bind: {
+            //     title: '{selectedNodePath}',
+            //     items: '{selectedNodePanel}'
+            //     // html: '<iframe src="{selectedNodeUrl}" frameborder="0" width="100%" height="100%"></iframe>'
+            // }
+            // ,
+            // items: {
+            //     xtype: 'skillssummary',
+            //     closable: true,
+            //     background: 'rgba(0,0,0,0)',
+            //     title: 'Skills Charts',
+            //     margin: 25,
+            //     cls: 'fes-raised'
+            // }
         },
         {
             region: 'south',

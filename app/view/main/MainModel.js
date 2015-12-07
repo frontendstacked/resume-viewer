@@ -37,6 +37,16 @@ Ext.define('ResumeViewer.view.main.MainModel', {
             } else {
                 return 'Sorry, no description available.';
             }
+        },
+        selectedNodePanel: function (get) {
+            var selection = get('treelist.selection');
+            console.log(selection);
+            // return {
+            //     title: 'ATDHVSGHLVDJ0',
+            //     xtype: 'skillssummary',
+            //     cls: 'fes-raised',
+            //     html: 'HTML'
+            // };
         }
     },
     stores: {
@@ -48,7 +58,6 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                     {
                         text: 'Bio',
                         url: '/resources/bio.html',
-                        iconCls: 'fa fa-book',
                         leaf: true
                     },
                     {
