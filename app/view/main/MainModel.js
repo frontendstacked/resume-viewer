@@ -83,7 +83,7 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                                         data: {
                                             url: 'http://www.pbslearningmedia.org/tools/',
                                             view: 'teachertoolspanel',
-                                            type: 'panel'
+                                            type: 'uxiframe'
                                         }
                                     },
                                     {

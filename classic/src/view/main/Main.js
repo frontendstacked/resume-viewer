@@ -10,7 +10,8 @@ Ext.define('ResumeViewer.view.main.Main', {
     xtype: 'app-main',
     requires: [
         'ResumeViewer.store.Personnel',
-        'ResumeViewer.store.Skills'
+        'ResumeViewer.store.Skills',
+        'Ext.ux.IFrame'
     ],
 //    title: 'Welcome to My Personal Site: Front End Stacked <small>(Don\'t snicker, it was a cheap domain)</small>',
     layout: 'border',
@@ -140,20 +141,6 @@ Ext.define('ResumeViewer.view.main.Main', {
             layout: 'fit',
             border: false,
             title: 'Use Navigation at Left'
-            // bind: {
-            //     title: '{selectedNodePath}',
-            //     items: '{selectedNodePanel}'
-            //     // html: '<iframe src="{selectedNodeUrl}" frameborder="0" width="100%" height="100%"></iframe>'
-            // }
-            // ,
-            // items: {
-            //     xtype: 'skillssummary',
-            //     closable: true,
-            //     background: 'rgba(0,0,0,0)',
-            //     title: 'Skills Charts',
-            //     margin: 25,
-            //     cls: 'fes-raised'
-            // }
         },
         {
             region: 'south',

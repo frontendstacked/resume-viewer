@@ -37,6 +37,7 @@ Ext.define('ResumeViewer.view.main.MainController', {
             view = record.get('data').view,
             id = [target.id, view].join('-'),
             title = record.get('text'),
+            src = record.get('data').url || null,
             requestedItem = target.queryById(id),
             visibleItems = target.query('> panel[hidden=false]');
 
@@ -50,6 +51,7 @@ Ext.define('ResumeViewer.view.main.MainController', {
                 id: id,
                 cls: 'fes-raised fes-center-firstchild',
                 title: title,
+                src: src,
                 margin: 25,
                 background: 'rgba(0,0,0,0)',
                 closable: true,
