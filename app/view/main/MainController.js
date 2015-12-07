@@ -11,6 +11,12 @@ Ext.define('ResumeViewer.view.main.MainController', {
 
     beforeRender: function (main) {
         // TODO - welcome message goes here
+        Ext.Msg.show({
+            title: 'Welcome!',
+            message: 'Greetings and salutations.',
+            buttons: Ext.Msg.OK,
+            shadow: false
+        });
     },
 
     init: function () {

@@ -9,9 +9,11 @@ $button-toolbar-background-color: lighten($base-color, 20%);
 $button-toolbar-border-color: lighten($base-color, 25%);
 $button-toolbar-color: lighten($base-color, 85%);
 
-// $button-toolbar-background-color-disabled: rgb(50, 50, 50);
-// $button-toolbar-background-color-over: rgb(155, 155, 155);
-// $button-toolbar-background-color-pressed: rgb(125, 135, 125);
+$button-default-background-color: $fes-purple;
+$button-default-background-color-focus: darken($fes-purple, 5%);
+$button-default-background-color-over: lighten($fes-purple, 10%);
+$button-default-background-color-pressed: darken($fes-purple, 10%);
+$button-default-background-color-disabled: lighten($base-color, 40%);
 
 // $button-toolbar-background-color-focus: rgb(165, 175, 165);
 // $button-toolbar-background-color-focus-over: rgb(175, 185, 175);

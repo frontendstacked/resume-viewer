@@ -39,7 +39,7 @@ background-image: url('images/textures/dark_brick_wall/dark_brick_wall.png');
         }
     }
 }
-.x-panel-header-default {
+.x-header {
         @include background-image(
             linear-gradient(
                 rgba(0,0,0,0.5) -100%,

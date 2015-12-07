@@ -16,14 +16,6 @@ Ext.define('ResumeViewer.view.main.Main', {
     layout: 'border',
     controller: 'main',
     viewModel: 'main',
-    listeners: {
-        afterlayout: {
-            fn: function () {
-                Ext.getCmp('centerPanel').add({
-                });
-            }
-        }
-    },
     items: [
         {
             title: 'My Resume',
@@ -37,7 +29,17 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'Matt\'s Site (TK)' }
+                            {
+                                text: 'Matt\'s Site (TK)',
+                                handler: function () {
+                                    Ext.Msg.show({
+                                        title: 'Check back later',
+                                        message: 'Sorry, Matt\'s site site is still under construction.',
+                                        buttons: Ext.Msg.OK,
+                                        shadow: false
+                                    });
+                                }
+                            }
                         ]
                     }
                 },
@@ -52,10 +54,11 @@ Ext.define('ResumeViewer.view.main.Main', {
                     }
                 },
                 {
-                    text: 'Word File',
+                    text: 'File',
                     menu: {
                         shadow: false,
                         items: [
+                            '&#160;In Word Format...',
                             { text: 'Save' },
                             { text: 'Print' }
                         ]
