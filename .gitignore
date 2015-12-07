@@ -6,3 +6,5 @@ bootstrap.js
 classic.json
 bootstrap.css
 bootstrap.json
+
+*.log

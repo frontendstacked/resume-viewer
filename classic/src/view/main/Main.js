@@ -11,6 +11,7 @@ Ext.define('ResumeViewer.view.main.Main', {
     requires: [
         'ResumeViewer.store.Personnel',
         'ResumeViewer.store.Skills',
+        'Ext.tab.Panel',
         'Ext.ux.IFrame'
     ],
     layout: 'border',
