@@ -24,13 +24,6 @@ Ext.define('ResumeViewer.view.main.MainController', {
         //     shadow: false
         // });
     },
-
-    init: function () {
-    },
-
-    onItemClick: function (record, item, index, e) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
     onNavItemSelect: function (treemodel, record, index) {
         var target = Ext.getCmp('centerRegion'),
             type = record.get('data').type,
@@ -57,11 +50,6 @@ Ext.define('ResumeViewer.view.main.MainController', {
         }
         requestedItem.show();
     },
-
-    // onItemSelected: function (sender, record) {
-    //     Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    // },
-
     onConfirm: function (choice) {
         if (choice === 'yes') {
             //
@@ -86,21 +74,22 @@ Ext.define('ResumeViewer.view.main.MainController', {
             cls: 'fes-raised fes-center-firstchild',
             title: cfg.title,
             margin: 25,
-            bodyPadding: 30,
             background: 'rgba(0,0,0,0)',
             closable: true,
             listeners: {
                 close: {
                     fn: function () {
                         Ext.getCmp('nav-treepanel').setSelection(null);
-                        Ext.getCmp('nav-treepanel').blur();
                     }
                 }
             }
         };
-        console.log(cfg);
         if (cfg.html) {
+            baseConfig.bodyPadding = 30;
             baseConfig.html = cfg.html;
+        }
+        if(cfg.selected) {
+            baseConfig.selected = cfg.selected;
         }
 
         // view/xtype-specific modifications to base panel common configs
@@ -114,7 +103,6 @@ Ext.define('ResumeViewer.view.main.MainController', {
                 };
                 break;
         }
-        console.log(baseConfig);
         return baseConfig;
     },
     // TODO: Conver Fullscreen Utils into Module ...............................

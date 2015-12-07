@@ -6,14 +6,13 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('ResumeViewer.view.main.Main', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.container.Viewport',
     xtype: 'app-main',
     requires: [
         'ResumeViewer.store.Personnel',
         'ResumeViewer.store.Skills',
         'Ext.ux.IFrame'
     ],
-//    title: 'Welcome to My Personal Site: Front End Stacked <small>(Don\'t snicker, it was a cheap domain)</small>',
     layout: 'border',
     controller: 'main',
     viewModel: 'main',
@@ -123,6 +122,7 @@ Ext.define('ResumeViewer.view.main.Main', {
             items: [{
                 xtype: 'treepanel',
                 controller: 'main',
+                viewmodel: 'main',
                 id: 'nav-treepanel',
                 rootVisible: false,
                 useArrows: true,
@@ -140,7 +140,7 @@ Ext.define('ResumeViewer.view.main.Main', {
             frame: false,
             layout: 'fit',
             border: false,
-            title: 'Use Navigation at Left'
+            title: 'View Area'
         },
         {
             region: 'south',

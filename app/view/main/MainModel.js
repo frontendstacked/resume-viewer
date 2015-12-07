@@ -43,6 +43,13 @@ Ext.define('ResumeViewer.view.main.MainModel', {
         // TODO: Store this data externally where it will be easier to edit
         navItems: {
             type: 'tree',
+            listeners: {
+                endupdate: {
+                    fn: function () {
+                        Ext.getCmp('nav-treepanel').setSelection(this.getAt(0));
+                    }
+                }
+            },
             root: {
                 expanded: true,
                 children: [
@@ -52,9 +59,8 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         data: {
                             view: 'intropanel',
                             type: 'panel',
-                            html:
-                                '<h1>Welcome to My Resume Viewer App!</h1>' +
-                                '<h2>Greetings and Saluations</h2>'
+                            html:   '<h1>Welcome To My Resume Viewer App!</h1>' +
+                                    '<h3>Please excuse my dust as I continue iterating on this early beta.</h3>'
                         }
                     },
                     {
