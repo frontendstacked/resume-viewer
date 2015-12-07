@@ -72,11 +72,19 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         }
                     },
                     {
-                        text: 'Skills',
+                        text: 'Skills Charts',
                         leaf: true,
                         data: {
                             view: 'skillssummary',
                             type: 'skillssummary'
+                        }
+                    },
+                    {
+                        text: 'Skills List',
+                        leaf: true,
+                        data: {
+                            view: 'skillsgrid',
+                            type: 'skillsgrid'
                         }
                     },
                     {

@@ -83,6 +83,9 @@
 }
 
 .fes-navtree {
+    .x-grid-item {
+        background-color: transparent;
+    }
     .x-tree-icon-parent, .x-tree-icon-parent-expanded, .x-tree-icon-leaf {
         display: none;
     }

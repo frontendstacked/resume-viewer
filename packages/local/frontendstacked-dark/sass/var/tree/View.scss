@@ -1,7 +1,7 @@
-$grid-body-background-color: transparent;
+//$grid-body-background-color: transparent;
 $grid-cell-inner-padding: 10px 5px;
 $grid-row-cell-color: lighten($base-color, 75%);
-$grid-row-cell-background-color: transparent;
+// $grid-row-cell-background-color: lighten($base-color, 15%);
 
 $grid-row-cell-over-color: lighten($base-color, 100%);
 $grid-row-cell-over-background-color: rgba(lighten($base-color, 35%), 0.8);

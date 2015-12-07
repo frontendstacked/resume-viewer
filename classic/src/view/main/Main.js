@@ -60,7 +60,9 @@ Ext.define('ResumeViewer.view.main.Main', {
                         shadow: false,
                         items: [
                             { text: 'About this Resume Viewer App ... &#160;&#160;&#160;&#160;' },
-                            { text: 'Github Project' }
+                            { text: 'Github Project', iconCls: 'fa fa-github', handler: function () {
+                                window.open("http://github.com/frontendstacked/resume-viewer", "_blank");
+                            }}
                         ]
                     }
                 },
@@ -80,7 +82,10 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { iconCls: 'fa fa-arrows-alt', text: 'Fullscreen', handler: 'onFullscreenClick' }
+                            { iconCls: 'fa fa-arrows-alt', text: 'Fullscreen', handler: 'onFullscreenClick' },
+                            { iconCls: 'fa fa-code', text: 'Source Code', handler: function () {
+                                window.open("http://github.com/frontendstacked/resume-viewer", "_blank");
+                            }}
                         ]
                     }
                 },

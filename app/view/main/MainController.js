@@ -11,6 +11,9 @@ Ext.define('ResumeViewer.view.main.MainController', {
         'ResumeViewer.view.skills.Panel',
         'ResumeViewer.view.skills.PanelController',
         'ResumeViewer.view.skills.PanelModel',
+        'ResumeViewer.view.skills.Skills',
+        'ResumeViewer.view.skills.SkillsController',
+        'ResumeViewer.view.skills.SkillsModel'
     ],
 
     alias: 'controller.main',
