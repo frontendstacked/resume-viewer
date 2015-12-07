@@ -4,6 +4,10 @@ Ext.define('ResumeViewer.view.skills.Panel', {
     xtype: 'skillssummary',
     title: 'Skills Charts',
 
+    requires: [
+        'Ext.layout.container.Column'
+    ],
+
     controller: 'skills-panel',
     viewModel: {
         type: 'skills-panel'
@@ -21,8 +25,7 @@ Ext.define('ResumeViewer.view.skills.Panel', {
                     Ext.Function.defer(this.controller.refresh, 100, this.controller);
                 }
             }
-        },
-
+        }
     ]
 
 });

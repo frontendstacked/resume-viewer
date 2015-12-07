@@ -63,7 +63,7 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
                             level: store.getAt(i).get('level')
                         }
                     ]
-                },
+                }
             }));
         }
     }
