@@ -52,7 +52,15 @@ Ext.define('ResumeViewer.view.main.MainController', {
                 title: title,
                 margin: 25,
                 background: 'rgba(0,0,0,0)',
-                closable: true
+                closable: true,
+                listeners: {
+                    close: {
+                        fn: function () {
+                            Ext.getCmp('nav-treepanel').setSelection(null);
+                            Ext.getCmp('nav-treepanel').blur();
+                        }
+                    }
+                }
             });
         }
         requestedItem.show();

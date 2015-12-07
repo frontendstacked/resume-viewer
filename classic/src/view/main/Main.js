@@ -122,6 +122,7 @@ Ext.define('ResumeViewer.view.main.Main', {
             items: [{
                 xtype: 'treepanel',
                 controller: 'main',
+                id: 'nav-treepanel',
                 rootVisible: false,
                 useArrows: true,
                 cls: 'fes-navtree',
