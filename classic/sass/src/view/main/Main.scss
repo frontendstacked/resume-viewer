@@ -90,3 +90,14 @@
         display: none;
     }
 }
+.fes-sample-expand {
+    color: fuchsia;
+    font-size: 15px;
+    margin-left: 5px;
+    &:active {
+        color: fuchsia;
+    }
+    &:visited {
+        color: inherit;
+    }
+}

@@ -46,7 +46,7 @@ Ext.define('ResumeViewer.view.main.MainModel', {
             listeners: {
                 endupdate: {
                     fn: function () {
-                        Ext.getCmp('nav-treepanel').setSelection(this.getAt(2));
+                        Ext.getCmp('nav-treepanel').setSelection(this.getAt(0));
                     }
                 }
             },
@@ -59,8 +59,11 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         data: {
                             type: 'panel',
                             view: 'welcomepanel',
-                            html:   '<h1>Welcome and Thanks For Stopping By</h1>' +
-                                    '<h3>Please excuse my dust as I continue iterating on this early beta.</h3>'
+                            html:   '<h1>Welcome and Thanks For Stopping By!</h1>' +
+                                    '<h2>Please excuse my dust as I continue iterating on this early beta.</h2>' +
+                                    '<p>In the meantime, please feel free to click around, using the "Navigation" tree on the left. I\'d suggest starting with "Skills Charts/List" or "Samples."</p>' +
+                                    '<p>I\'ll be posting a "to-do" list here soon to let you know what kinds of features I plan on adding: things such as sorting and filtering the skills charts, a tab layout for samples, etc.</p>' +
+                                    '<p>Right now, the skills charts\' load mask isn\'t displaying while they generate. Please give them a couple of seconds.</p>'
                         }
                     },
                     {
@@ -108,6 +111,15 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                                 text: 'PBS LearningMedia',
                                 children: [
                                     {
+                                        text: 'Favorites & Folders',
+                                        leaf: true,
+                                        data: {
+                                            url: 'http://www.pbslearningmedia.org/favorites/',
+                                            view: 'pbsfavoritespanel',
+                                            type: 'uxiframe'
+                                        }
+                                    },
+                                    {
                                         text: 'Teacher Tools',
                                         leaf: true,
                                         data: {
@@ -122,21 +134,39 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                                         data: {
                                             url: 'http://www.pbslearningmedia.org/student/',
                                             view: 'studenthomepagepanel',
-                                            type: 'panel'
+                                            type: 'uxiframe'
                                         }
                                     }
                                 ],
                                 data: {
                                     url: 'http://www.pbslearningmedia.org',
                                     view: 'pbslmpanel',
-                                    type: 'panel'
+                                    type: 'uxiframe'
+                                }
+                            },
+                            {
+                                text: 'Slate\'s Maps of the Week',
+                                leaf: true,
+                                data: {
+                                    url: 'http://www.slate.com/authors.matt_dodson.html',
+                                    view: 'slatemapspanel',
+                                    type: 'uxiframe'
+                                }
+                            },
+                            {
+                                text: 'Monroe Street Market',
+                                leaf: true,
+                                data: {
+                                    url: 'http://www.monroestreetmarket.com',
+                                    view: 'hzmsmpanel',
+                                    type: 'uxiframe'
                                 }
                             }
                         ],
                         data: {
-                            url: '',
                             view: 'samplespanel',
-                            type: 'panel'
+                            type: 'panel',
+                            html: '<h2>Please select item under the samples node to view it here.</h2>'
                         }
                     },
                     {

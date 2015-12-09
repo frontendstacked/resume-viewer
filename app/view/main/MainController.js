@@ -76,11 +76,12 @@ Ext.define('ResumeViewer.view.main.MainController', {
     },
     //  Non-handlers
     createConfig: function (cfg) {
+        var titleCmp = cfg.src? cfg.title + '&#160;&#160;<small>' + cfg.src + '</small>&#160;<a href="' + cfg.src + '" title="View in new tab" target="_blank"><span class="fa fa-expand fes-sample-expand"></span></a>' : cfg.title;
         baseConfig = {
             xtype: cfg.type,
             id: cfg.id,
             cls: 'fes-raised fes-center-firstchild',
-            title: cfg.title,
+            title: titleCmp,
             margin: 25,
             background: 'rgba(0,0,0,0)',
             closable: true,
