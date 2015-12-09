@@ -10,11 +10,19 @@ Ext.define('ResumeViewer.Application', {
 
     stores: [
         // TODO: add global / shared stores here
-        'ResumeViewer.store.Skills'
+        'ResumeViewer.store.Skills',
+        'ResumeViewer.store.Qualifications',
+        'ResumeViewer.store.Jobs',
+        'ResumeViewer.store.JobDuties'
     ],
 
     launch: function () {
         // TODO - Launch the application
+        // ResumeViewer.model.Job.load(1, {
+        //     callback: function (record) {
+        //         console.log(record);
+        //     }
+        // });
     },
 
     onAppUpdate: function () {

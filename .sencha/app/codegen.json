@@ -272,6 +272,42 @@
         "modelNamespace": "ResumeViewer.model",
         "name": "Skills"
       }
+    },
+    "app/model/Jobs.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "ResumeViewer",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:int:null,org:auto:null,position:auto:null,dateline:auto:null,duties:auto:null",
+        "modelFileName": "Jobs",
+        "modelNamespace": "ResumeViewer.model",
+        "name": "Jobs"
+      }
+    },
+    "app/model/JobDuties.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "ResumeViewer",
+        "baseClass": "Ext.data.Model",
+        "fields": "job_id:int:null,desc:string:null",
+        "modelFileName": "JobDuties",
+        "modelNamespace": "ResumeViewer.model",
+        "name": "JobDuties"
+      }
+    },
+    "app/model/Base.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "ResumeViewer",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:int:null",
+        "modelFileName": "Base",
+        "modelNamespace": "ResumeViewer.model",
+        "name": "Base"
+      }
     }
   }
 }

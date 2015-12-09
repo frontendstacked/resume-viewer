@@ -46,7 +46,7 @@ Ext.define('ResumeViewer.view.main.MainModel', {
             listeners: {
                 endupdate: {
                     fn: function () {
-                        Ext.getCmp('nav-treepanel').setSelection(this.getAt(0));
+                        Ext.getCmp('nav-treepanel').setSelection(this.getAt(2));
                     }
                 }
             },
@@ -54,13 +54,27 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                 expanded: true,
                 children: [
                     {
-                        text: 'Intro / Bio',
+                        text: 'Welcome',
                         leaf: true,
                         data: {
-                            view: 'intropanel',
                             type: 'panel',
-                            html:   '<h1>Welcome To My Resume Viewer App!</h1>' +
+                            view: 'welcomepanel',
+                            html:   '<h1>Welcome and Thanks For Stopping By</h1>' +
                                     '<h3>Please excuse my dust as I continue iterating on this early beta.</h3>'
+                        }
+                    },
+                    {
+                        text: 'Bio',
+                        leaf: true,
+                        data: {
+                            view: 'biopanel',
+                            type: 'panel',
+                            html:   '<h1>Matt\'s Bio</h1>' +
+                                    '<p>Matt Dodson is a front end-focsed Web developer and Flash expatriate that is also competent in design and the back end area of the Web technology stack.</p>' +
+                                    '<p>He started his career in 2001 as a Web designer for a small database consulting startup, but discovered an enjoyment for developing data-driven Flash and Web apps and found a niche in the DC-area non-profit sector designing and developing Web interfaces to FileMaker Pro databases.</p>' +
+                                    '<p>In 2007, he took a Software Engineer position at The Washington Post, joining the development team supporting Slate Magazine. His primary role was focused on the front end area of the site’s technology stack while supporting editorial staff by designing and developing small, data-driven Flash interactives for various stories.</p>' +
+                                    '<p>After Flash lost favor in 2010—coincidentally, after Steve Jobs’ famous open letter to Adobe that April—he shifted focus to learning how to create the same level of data-driven, interactive Web apps using native browser technologies. That’s been his primary area of interest ever since.</p>' +
+                                    '<p>Matt was born in Washington, DC, grew up in Northern Virginia, and now lives in the District. He is a fan of Pink Floyd and the Washington Redskins. Growing up in a working class family, college after high school was never in the cards dealt to him, but he began putting himself through school at the local Strayer University at the turn of the decade and hopes to save up enough money to graduate from Penn State, where his transfer to their online program was recently accepted.</p>'
                         }
                     },
                     {
@@ -68,7 +82,7 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         leaf: true,
                         data: {
                             view: 'qualificationspanel',
-                            type: 'panel'
+                            type: 'qualificationspanel'
                         }
                     },
                     {
@@ -129,18 +143,16 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         text: 'Work Experience',
                         leaf: true,
                         data: {
-                            url: '',
-                            view: 'workexperiencepanel',
-                            type: 'panel'
+                            view: 'jobhistorypanel',
+                            type: 'jobhistorypanel'
                         }
                     },
                     {
                         text: 'Education',
                         leaf: true,
                         data: {
-                            url: '',
                             view: 'educationpanel',
-                            type: 'panel'
+                            type: 'educationpanel'
                         }
                     }
                 ]

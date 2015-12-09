@@ -7,10 +7,10 @@ Ext.define('ResumeViewer.store.Skills', {
     //autoLoad: true,
     proxy: {
         type: 'ajax',
-        url: 'resources/data/skills.json',
+        url: 'resources/data/resume_content.json',
         reader: {
             type: 'json',
-            rootProperty: 'skills'
+            rootProperty: 'proficiencies'
         }
     }
 });

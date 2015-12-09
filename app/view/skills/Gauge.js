@@ -22,7 +22,7 @@ Ext.define('ResumeViewer.view.skills.Gauge',{
         // ],
         donut: 30,
         maximum: 5,
-        minimum: 1,
+        minimum: 0,
         //,
         // needle: true,
         needleLength: 95

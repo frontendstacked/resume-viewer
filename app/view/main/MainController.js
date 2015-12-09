@@ -8,6 +8,11 @@ Ext.define('ResumeViewer.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
+        'ResumeViewer.view.education.Education',
+        'ResumeViewer.view.qualifications.Summary',
+        'ResumeViewer.view.jobs.History',
+        'ResumeViewer.view.jobs.HistoryController',
+        'ResumeViewer.view.jobs.HistoryModel',
         'ResumeViewer.view.skills.Panel',
         'ResumeViewer.view.skills.PanelController',
         'ResumeViewer.view.skills.PanelModel',

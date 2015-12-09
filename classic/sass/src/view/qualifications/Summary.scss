@@ -1,0 +1,11 @@
+.fes-res-qualifications {
+    list-style: square;
+    margin-top: 1px;
+    padding: 10px 20px 10px 40px;
+
+    & > li {
+        font-size: 15px;
+        line-height: 1.25;
+        margin: 10px 0;
+    }
+}
