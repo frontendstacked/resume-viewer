@@ -6,7 +6,7 @@ $grid-row-cell-color: lighten($base-color, 75%);
 $grid-row-cell-over-color: lighten($base-color, 100%);
 $grid-row-cell-over-background-color: rgba(lighten($base-color, 35%), 0.8);
 
-$grid-row-cell-selected-color: $grid-row-cell-over-color;
+$grid-row-cell-selected-color: rgb(200,225,250);
 $grid-row-cell-selected-background-color: rgba(lighten($base-color, 30%), 0.8);
 
 $grid-row-cell-focus-background-color: transparent;

@@ -5,6 +5,7 @@ Ext.define('ResumeViewer.view.jobs.HistoryController', {
     onRender: function () {
         var viewModel = this.getViewModel(), // triggers autoload of configured stores
             view = this.getView(),
+            store = viewModel.getStore('jobs'),
             jobs = [],
             tpl = new Ext.XTemplate(
                 '<ul class="fes-res-jobs">',
@@ -22,15 +23,10 @@ Ext.define('ResumeViewer.view.jobs.HistoryController', {
                 '</tpl>',
                 '</ul>'
             );
-
-        viewModel.getStore('jobs').on('load', function (store) {
-            for (var i = 0; i < store.getCount(); i += 1) {
-                jobs.push(store.getAt(i).data);
-            }
-            tpl.overwrite(view.body, jobs);
-        });
-
-
+        for (var i = 0; i < store.getCount(); i += 1) {
+            jobs.push(store.getAt(i).data);
+        }
+        tpl.overwrite(view.body, jobs);
     }
 
 });

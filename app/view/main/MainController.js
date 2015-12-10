@@ -40,9 +40,9 @@ Ext.define('ResumeViewer.view.main.MainController', {
             title = record.get('text'),
             src = record.get('data').url || null,
             html = record.get('data').html || null,
+            items = record.get('data').items || null,
             requestedItem = target.queryById(id),
             visibleItems = target.query('> panel[hidden=false]');
-
         // TODO: Find out if a card layout manager could handle this better
         for (var i = 0; i < visibleItems.length; i += 1) {
             visibleItems[i].hide();
@@ -53,7 +53,8 @@ Ext.define('ResumeViewer.view.main.MainController', {
                 id: id,
                 title: title,
                 src: src,
-                html: html
+                html: html,
+                items: items
             }));
         }
         requestedItem.show();
@@ -94,8 +95,11 @@ Ext.define('ResumeViewer.view.main.MainController', {
             }
         };
         if (cfg.html) {
-            baseConfig.bodyPadding = 30;
+            baseConfig.bodyPadding = '15 20';
             baseConfig.html = cfg.html;
+        }
+        if (cfg.items) {
+            baseConfig.items = cfg.items;
         }
         if(cfg.selected) {
             baseConfig.selected = cfg.selected;

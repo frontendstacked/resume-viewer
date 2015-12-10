@@ -17,6 +17,7 @@ Ext.define('ResumeViewer.Application', {
     ],
 
     launch: function () {
+        Ext.getDoc().dom.title = "Matthew Dodson Resume : Front End Developer";
         // TODO - Launch the application
         // ResumeViewer.model.Job.load(1, {
         //     callback: function (record) {

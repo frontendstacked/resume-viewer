@@ -81,10 +81,16 @@
     top: 30px;
     right: -24px;
 }
+.fes-tabpanel-child {
+    border-top: solid 1px rgb(77, 77, 69);
+}
 
 .fes-navtree {
     .x-grid-item {
         background-color: transparent;
+    }
+    .x-grid-item-selected {
+        background-color: rgba(200,200,180,0.3);
     }
     .x-tree-icon-parent, .x-tree-icon-parent-expanded, .x-tree-icon-leaf {
         display: none;
@@ -99,5 +105,11 @@
     }
     &:visited {
         color: inherit;
+    }
+}
+.fes-res-todos {
+    & > li {
+        font-size: 15px;
+        margin: 10px 0;
     }
 }

@@ -57,13 +57,48 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         text: 'Welcome',
                         leaf: true,
                         data: {
-                            type: 'panel',
+                            type: 'tabpanel',
                             view: 'welcomepanel',
-                            html:   '<h1>Welcome and Thanks For Stopping By!</h1>' +
-                                    '<h2>Please excuse my dust as I continue iterating on this early beta.</h2>' +
+                            items: [{
+                                xtype: 'panel',
+                                title: 'Message',
+                                closable: true,
+                                cls: 'fes-tabpanel-child',
+                                bodyPadding: 20,
+                                html:   '<h1>Welcome and Thanks For Stopping By!</h1>' +
+                                    '<h2>Please excuse my dust as I continue building and iterating on this early beta.</h2>' +
+                                    '<h3><span class="fa fa-star" style="color:goldenrod"></span> Just added <span class="fa fa-star" style="color:goldenrod"></span> A todo list tab so you can get a sense of where I plan on taking this app.</h3>' +
                                     '<p>In the meantime, please feel free to click around, using the "Navigation" tree on the left. I\'d suggest starting with "Skills Charts/List" or "Samples."</p>' +
-                                    '<p>I\'ll be posting a "to-do" list here soon to let you know what kinds of features I plan on adding: things such as sorting and filtering the skills charts, a tab layout for samples, etc.</p>' +
-                                    '<p>Right now, the skills charts\' load mask isn\'t displaying while they generate. Please give them a couple of seconds.</p>'
+                                    '<p><strong>Please note: </strong>I haven\'t had a chance to test in Internet Explorer yet. If anything looks strange, please try Chrome or Firefox.</p>' +
+                                    '<p>Right now, the skills charts\' load mask isn\'t displaying while they generate. Please give them a couple of seconds.</p>' +
+                                    '<p>HINT: if you sort the "Skills List" table, then close and re-open "Skills Charts" panel, your sort will be applied to those graphs.</p>'
+                                },
+                                {
+                                    xtype: 'panel',
+                                    title: 'To Do List',
+                                    closable: true,
+                                    cls: 'fes-tabpanel-child',
+                                    data: {
+                                        items: [
+                                            '<strong><em>Write descriptions!</em></strong> Especially for work samples',
+                                            '<i class="fa fa-exclamation-triangle" style="color:goldenrod"></i> Fix bug that swaps panel selection when clicking a tree expansion arrow',
+                                            'Allow easy filtering and sorting of Skills, possibly to include live search and drag & drop',
+                                            'Wire-up remaining application menu items (File, View, Help, etc.)',
+                                            'Migrate data from internal ViewModels and external JSON files to Restful Express backend',
+                                            'Come up with a name for this app',
+                                            'Create a sample app to demonstrate Angular',
+                                            'Create a sample app to demonstrate React'
+                                        ]
+                                    },
+                                    tpl: new Ext.XTemplate(
+                                        '<ol class="fes-res-todos">',
+                                        '<tpl for="items">',
+                                            '<li>{.}</li>',
+                                        '</tpl>',
+                                        '</ol>'
+                                    )
+                                }
+                            ]
                         }
                     },
                     {
@@ -72,8 +107,9 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         data: {
                             view: 'biopanel',
                             type: 'panel',
+                            bodyPadding: 20,
                             html:   '<h1>Matt\'s Bio</h1>' +
-                                    '<p>Matt Dodson is a front end-focsed Web developer and Flash expatriate that is also competent in design and the back end area of the Web technology stack.</p>' +
+                                    '<p>Matt Dodson is a front end-focused Web developer and Flash expatriate that is also competent in design and the back end area of the Web technology stack.</p>' +
                                     '<p>He started his career in 2001 as a Web designer for a small database consulting startup, but discovered an enjoyment for developing data-driven Flash and Web apps and found a niche in the DC-area non-profit sector designing and developing Web interfaces to FileMaker Pro databases.</p>' +
                                     '<p>In 2007, he took a Software Engineer position at The Washington Post, joining the development team supporting Slate Magazine. His primary role was focused on the front end area of the site’s technology stack while supporting editorial staff by designing and developing small, data-driven Flash interactives for various stories.</p>' +
                                     '<p>After Flash lost favor in 2010—coincidentally, after Steve Jobs’ famous open letter to Adobe that April—he shifted focus to learning how to create the same level of data-driven, interactive Web apps using native browser technologies. That’s been his primary area of interest ever since.</p>' +
@@ -111,10 +147,10 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                                 text: 'PBS LearningMedia',
                                 children: [
                                     {
-                                        text: 'Favorites & Folders',
+                                        text: 'Search Results Page',
                                         leaf: true,
                                         data: {
-                                            url: 'http://www.pbslearningmedia.org/favorites/',
+                                            url: 'http://www.pbslearningmedia.org/search/?q=cell',
                                             view: 'pbsfavoritespanel',
                                             type: 'uxiframe'
                                         }

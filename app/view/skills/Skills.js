@@ -12,7 +12,7 @@ Ext.define('ResumeViewer.view.skills.Skills',{
         type: 'skills'
     },
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
+        { text: 'Name',  dataIndex: 'name', flex: 1 },
         { text: 'Type', dataIndex: 'type', flex: 1 },
         { text: 'Level', dataIndex: 'level'}
     ],

@@ -73,8 +73,29 @@ Ext.define('ResumeViewer.view.main.Main', {
                         shadow: false,
                         items: [
                             '&#160;In Word Format...',
-                            { text: 'Save' },
-                            { text: 'Print' }
+                            {
+                                text: 'Save',
+                                handler: function () {
+                                    Ext.Msg.show({
+                                        title: 'Check back later',
+                                        message: 'Save-able version coming soon!',
+                                        buttons: Ext.Msg.OK,
+                                        shadow: false
+                                    });
+                                }
+
+                            },
+                            {
+                                text: 'Print',
+                                handler: function () {
+                                    Ext.Msg.show({
+                                        title: 'Check back later',
+                                        message: 'Printable version coming soon!',
+                                        buttons: Ext.Msg.OK,
+                                        shadow: false
+                                    });
+                                }
+                            }
                         ]
                     }
                 },
