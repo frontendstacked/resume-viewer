@@ -102,6 +102,19 @@ Ext.define('ResumeViewer.view.main.MainModel', {
                         }
                     },
                     {
+                        text: 'Contact Info',
+                        leaf: true,
+                        data: {
+                            view: 'contactpanel',
+                            type: 'panel',
+                            bodyPadding: 20,
+                            html:   '<h1>How to Reach Matt Dodson</h1>' +
+                                    '<p><strong>Email: </strong> <a class="fes-link" href="MAILTO:matthew.dodson.dc@gmail.com">matthew.dodson.dc@gmail.com</a></p>' +
+                                    '<p><strong>Work Github: </strong> <a class="fes-link" href="http://github.com/dodsonm" target="_blank">dodsonm</a></p>' +
+                                    '<p><strong>Hobby Github: </strong> <a class="fes-link" href="http://github.com/frontendstacked" target="_blank">frontendstacked</a></p>'
+                        }
+                    },
+                    {
                         text: 'Bio',
                         leaf: true,
                         data: {

@@ -135,7 +135,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                     text: 'Goto',
                     menu: {
                         shadow: false,
-                        // TODO: REFACTOR THESE HANDLERS!!!
+                        // TODO: REFACTOR THESE HANDLERS!!! This was a very-very-very-last-minute addition
                         items: [
                             { iconCls: 'fes-menuitem-icon fa fa-home', text: 'Welcome',
                                 handler: function () {
@@ -143,57 +143,77 @@ Ext.define('ResumeViewer.view.main.Main', {
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(0));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-newspaper-o', text: 'Bio',
+                            { iconCls: 'fes-menuitem-icon fa fa-newspaper-o', text: 'Contact Info',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(1));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-certificate', text: 'Qualifications',
+                            { iconCls: 'fes-menuitem-icon fa fa-newspaper-o', text: 'Bio',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(2));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-tachometer', text: 'Skills Charts',
+                            { iconCls: 'fes-menuitem-icon fa fa-certificate', text: 'Qualifications',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(3));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-list', text: 'Skills List',
+                            { iconCls: 'fes-menuitem-icon fa fa-tachometer', text: 'Skills Charts',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(4));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-file-code-o', text: 'Samples',
+                            { iconCls: 'fes-menuitem-icon fa fa-list', text: 'Skills List',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(5));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-line-chart', text: 'Work Experience',
+                            { iconCls: 'fes-menuitem-icon fa fa-file-code-o', text: 'Samples',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(6));
                                 }
                             },
-                            { iconCls: 'fes-menuitem-icon fa fa-mortar-board', text: 'Education',
+                            { iconCls: 'fes-menuitem-icon fa fa-line-chart', text: 'Work Experience',
                                 handler: function () {
                                     var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
                                     Ext.getCmp('nav-treepanel').setSelection(store.getAt(7));
                                 }
                             },
+                            { iconCls: 'fes-menuitem-icon fa fa-mortar-board', text: 'Education',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(8));
+                                }
+                            }
                         ]
                     }
                 },
                 {
-                    text: 'Help',
+                    text: 'Contact & Github',
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'About This',iconCls: 'fes-menuitem-icon fa fa-question' }
+                            { text: 'Email Matt',iconCls: 'fes-menuitem-icon fa fa-envelope-o',
+                                handler: function () {
+                                    window.location.assign("mailto:matthew.dodson.dc@gmail.com");
+                                }
+                            },
+                            { text: 'Matt\'s Work Github',iconCls: 'fes-menuitem-icon fa fa-github',
+                                handler: function () {
+                                    window.open("http://github.com/dodsonm", "_blank");
+                                }
+                            },
+                            { text: 'Matt\'s Hobby Github',iconCls: 'fes-menuitem-icon fa fa-github',
+                                handler: function () {
+                                    window.open("http://github.com/frontendstacked", "_blank");
+                                }
+                            }
                         ]
                     }
                 },

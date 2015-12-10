@@ -1,6 +1,16 @@
 .fes-menuitem-icon {
     color: $fes-purple!important;
 }
+.fes-link {
+    color: $fes-steelblue!important;
+
+    &:hover {
+        color: fuchsia;
+    }
+    &:visited {
+        color: darken($fes-steelblue, 3%);
+    }
+}
 .application-menu.x-toolbar-default {
     background-image: url('images/textures/concrete_wall/concrete_wall.png');
     padding: 0 8px;

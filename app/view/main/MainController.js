@@ -67,11 +67,11 @@ Ext.define('ResumeViewer.view.main.MainController', {
     onFullscreenClick: function (menuItem) {
         if ( this.getFullscreenElement() ) {
             this.exitFullscreen();
-            menuItem.setIconCls("fa fa-arrows-alt");
+            menuItem.setIconCls("fes-menuitems-icon fa fa-arrows-alt");
             menuItem.setText("Fullscreen");
         } else {
             this.enterFullscreen(document.body);
-            menuItem.setIconCls("fa fa-close");
+            menuItem.setIconCls("fes-menuitems-icon fa fa-close");
             menuItem.setText("Exit Fullscreen");
         }
     },
