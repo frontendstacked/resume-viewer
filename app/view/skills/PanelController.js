@@ -4,12 +4,19 @@ Ext.define('ResumeViewer.view.skills.PanelController', {
 
     init: function () {
         Ext.data.StoreManager.lookup('skillsStore').load();
+        this.getView().setTitle('Drawing skills charts. One moment please...'); // TODO: remove after loadmask is working
+        this.getView().add({
+            xtype: 'panel',
+            bodyPadding: 20,
+            html: '<h1>Drawing Skills Charts</h1><h3>One moment please.</h3>'
+        });
     },
-    onSkillsLoad: function (store, records, successful, eOpts ) {
+    onSkillsLoad: function (store, records, successful, eOpts ) { // TODO: does this load actually get called?
         this.refresh();
     },
     // TODO: can updateLayout do this better?
     refresh: function () {
+        this.getView().setTitle('Skills Charts'); // TODO: remove after loadmask is working
         this.getView().removeAll();
         this.addPanels();
     },

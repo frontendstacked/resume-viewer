@@ -17,6 +17,7 @@ Ext.define('ResumeViewer.view.main.Main', {
     layout: 'border',
     controller: 'main',
     viewModel: 'main',
+    id: 'mainViewport',
     items: [
         {
             title: 'My Resume',
@@ -32,6 +33,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                         items: [
                             {
                                 text: 'Other Experimental Apps (TK)',
+                                iconCls: 'fes-menuitem-icon fa fa-flask',
                                 handler: function () {
                                     Ext.Msg.show({
                                         title: 'Check back later',
@@ -43,6 +45,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                             },
                             {
                                 text: 'Matt\'s Site (TK)',
+                                iconCls: 'fes-menuitem-icon fa fa-home',
                                 handler: function () {
                                     Ext.Msg.show({
                                         title: 'Check back later',
@@ -60,10 +63,25 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'About this Resume Viewer App ... &#160;&#160;&#160;&#160;' },
-                            { text: 'Github Project', iconCls: 'fa fa-github', handler: function () {
-                                window.open("http://github.com/frontendstacked/resume-viewer", "_blank");
-                            }}
+                            {
+                                text: 'About this Resume, Viewer App ... &#160;&#160;&#160;&#160;',
+                                iconCls: 'fes-menuitem-icon fa fa-info',
+                                handler: function () {
+                                    Ext.Msg.show({
+                                        title: 'Check back later',
+                                        message: 'Coming soon',
+                                        buttons: Ext.Msg.OK,
+                                        shadow: false
+                                    });
+                                }
+                            },
+                            {
+                                text: 'Github Project',
+                                iconCls: 'fes-menuitem-icon fa fa-github',
+                                handler: function () {
+                                    window.open("http://github.com/frontendstacked/resume-viewer", "_blank");
+                                }
+                            }
                         ]
                     }
                 },
@@ -74,7 +92,8 @@ Ext.define('ResumeViewer.view.main.Main', {
                         items: [
                             '&#160;In Word Format...',
                             {
-                                text: 'Save',
+                                text: 'Download',
+                                iconCls: 'fes-menuitem-icon fa fa-download',
                                 handler: function () {
                                     Ext.Msg.show({
                                         title: 'Check back later',
@@ -87,6 +106,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                             },
                             {
                                 text: 'Print',
+                                iconCls: 'fes-menuitem-icon fa fa-print',
                                 handler: function () {
                                     Ext.Msg.show({
                                         title: 'Check back later',
@@ -104,10 +124,67 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { iconCls: 'fa fa-arrows-alt', text: 'Fullscreen', handler: 'onFullscreenClick' },
-                            { iconCls: 'fa fa-code', text: 'Source Code', handler: function () {
+                            { iconCls: 'fes-menuitem-icon fa fa-arrows-alt', text: 'Fullscreen', handler: 'onFullscreenClick' },
+                            { iconCls: 'fes-menuitem-icon fa fa-code', text: 'Source Code', handler: function () {
                                 window.open("http://github.com/frontendstacked/resume-viewer", "_blank");
                             }}
+                        ]
+                    }
+                },
+                {
+                    text: 'Goto',
+                    menu: {
+                        shadow: false,
+                        // TODO: REFACTOR THESE HANDLERS!!!
+                        items: [
+                            { iconCls: 'fes-menuitem-icon fa fa-home', text: 'Welcome',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(0));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-newspaper-o', text: 'Bio',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(1));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-certificate', text: 'Qualifications',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(2));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-tachometer', text: 'Skills Charts',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(3));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-list', text: 'Skills List',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(4));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-file-code-o', text: 'Samples',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(5));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-line-chart', text: 'Work Experience',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(6));
+                                }
+                            },
+                            { iconCls: 'fes-menuitem-icon fa fa-mortar-board', text: 'Education',
+                                handler: function () {
+                                    var store = Ext.getCmp('mainViewport').getViewModel().getStore('navItems');
+                                    Ext.getCmp('nav-treepanel').setSelection(store.getAt(7));
+                                }
+                            },
                         ]
                     }
                 },
@@ -116,7 +193,7 @@ Ext.define('ResumeViewer.view.main.Main', {
                     menu: {
                         shadow: false,
                         items: [
-                            { text: 'About This' }
+                            { text: 'About This',iconCls: 'fes-menuitem-icon fa fa-question' }
                         ]
                     }
                 },

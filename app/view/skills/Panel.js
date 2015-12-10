@@ -20,8 +20,10 @@ Ext.define('ResumeViewer.view.skills.Panel', {
     scrollable: true,
     listeners: [
         {
+            // TODO: Get this to work on skills-panel controller. Handlers
+            // are currently looked for on main controller for some reason.
             resize: {
-                fn: function () {
+                fn: function (panel) {
                     Ext.Function.defer(this.controller.refresh, 100, this.controller);
                 }
             }

@@ -18,6 +18,11 @@ Ext.define('ResumeViewer.Application', {
 
     launch: function () {
         Ext.getDoc().dom.title = "Matthew Dodson Resume : Front End Developer";
+        var link = document.createElement('link');
+        link.type = 'image/png';
+        link.rel = 'shortcut icon';
+        link.href = '/favicon.ico'; //assumes favicon is in the app root as it should be
+        document.getElementsByTagName('head')[0].appendChild(link);
         // TODO - Launch the application
         // ResumeViewer.model.Job.load(1, {
         //     callback: function (record) {

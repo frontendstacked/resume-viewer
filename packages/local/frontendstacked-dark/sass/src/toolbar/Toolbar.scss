@@ -1,6 +1,10 @@
+.fes-menuitem-icon {
+    color: $fes-purple!important;
+}
 .application-menu.x-toolbar-default {
     background-image: url('images/textures/concrete_wall/concrete_wall.png');
     padding: 0 8px;
+
 
     .x-box-inner {
         overflow: visible;
